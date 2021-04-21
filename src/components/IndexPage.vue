@@ -2,7 +2,7 @@
     <div v-if="user">
         <h1>접속한 유저</h1>
         <p>아이디: {{user.id}}</p>
-        <p>비밀번호: {{user.passowrd}}</p>
+        <p>비밀번호: {{user.password}}</p>
         <p>이름: {{user.name}}</p>
     </div>
 </template>
