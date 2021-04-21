@@ -1,6 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import IndexPage from '@/components/IndexPage'
+import Home from '@/components/Home'
+import UserPage from '@/components/IndexPage'
+import MovieIndex from '@/components/MovieIndexPage'
+import MovieShow from '@/components/MovieShowPage'
 
 Vue.use(Router)
 
@@ -9,8 +12,23 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'IndexPage',
-      component: IndexPage
-    }
+      name: 'home',
+      component: Home
+    },
+    {
+      path: '/user',
+      name: 'userPage',
+      component: UserPage
+    },
+    {
+      path: '/movieIndex',
+      name: 'movieIndex',
+      component: MovieIndex
+    },
+    {
+      path: '/movieIndex/:id?',
+      name: 'movieShow',
+      component: MovieShow
+    },
   ]
 })
