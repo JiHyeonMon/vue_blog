@@ -2,10 +2,12 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/components/Home'
 import UserPage from '@/components/user/IndexUser'
-import MovieIndex from '@/components/MovieIndexPage'
-import MovieShow from '@/components/MovieShowPage'
+import MovieIndex from '@/components/movie/MovieIndexPage'
+import MovieShow from '@/components/movie/MovieShowPage'
 import SignUp from '@/components/user/Signup'
 import SignIn from '@/components/user/Signin'
+import BlogHome from '@/components/blog/blogHome'
+import CreatePost from '@/components/blog/createPost'
 
 Vue.use(Router)
 
@@ -23,7 +25,7 @@ export default new Router({
       component: UserPage
     },
     {
-      path: '/user/signin',
+      path: '/user/signIn',
       name: 'signIn',
       component: SignIn
     },
@@ -33,12 +35,22 @@ export default new Router({
       component: SignUp
     },
     {
-      path: '/movieIndex',
+      path: '/blog',
+      name: 'blogHome',
+      component: BlogHome
+    },
+    {
+      path: '/blog/create',
+      name: 'create',
+      component: CreatePost
+    },
+    {
+      path: '/movie',
       name: 'movieIndex',
       component: MovieIndex
     },
     {
-      path: '/movieIndex/:id?',
+      path: '/movie/:id?',
       name: 'movieShow',
       component: MovieShow
     },
