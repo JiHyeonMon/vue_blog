@@ -8,6 +8,7 @@ import SignUp from '@/components/user/Signup'
 import SignIn from '@/components/user/Signin'
 import BlogHome from '@/components/blog/blogHome'
 import CreatePost from '@/components/blog/createPost'
+import DetailBlog from '@/components/blog/detailBlog'
 
 Vue.use(Router)
 
@@ -38,6 +39,11 @@ export default new Router({
       path: '/blog',
       name: 'blogHome',
       component: BlogHome
+    },
+    {
+      path: '/blog/:id?',
+      name: 'detailBlog',
+      component: DetailBlog
     },
     {
       path: '/blog/create',
