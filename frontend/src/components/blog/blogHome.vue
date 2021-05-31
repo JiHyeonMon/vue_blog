@@ -3,12 +3,12 @@
     <h1>BLOG</h1>
     <router-link :to="{ name: 'create'}" class="link">글쓰기</router-link>
 
-    <ul class="blogs">
+    <ul class="blogList">
       <li v-for="post in posts" class="item" :key="post.id">
-        <p>{{post}}</p>
-        <p>{{post.title}}</p>
-        <router-link :to="{ name: 'detailBlog', params: { id: post._id }}" class="link">자세히보기</router-link>
-        <!-- <p>{{post.contents}}</p> -->
+        <p>
+          {{post.title}}
+          <router-link :to="{ name: 'detailBlog', params: { id: post._id }}" class="link">...글 보기...</router-link>
+        </p>
       </li>
     </ul>
   </div>
@@ -31,8 +31,12 @@ export default {
 </script>
 
 <style>
-.blogs {
-  align-items: flex-start;
-  margin-bottom: 20px;
+.blogList {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+
+  max-width: 250px;
+  width: 100%;
 }
 </style>

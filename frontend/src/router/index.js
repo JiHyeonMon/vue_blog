@@ -51,6 +51,16 @@ export default new Router({
       component: CreatePost
     },
     {
+      path: '/blog/delete/:id?',
+      name: 'blogHome',
+      component: BlogHome
+    },
+    {
+      path: '/blog/update/:id?',
+      name: 'detailBlog',
+      component: DetailBlog
+    },
+    {
       path: '/movie',
       name: 'movieIndex',
       component: MovieIndex
